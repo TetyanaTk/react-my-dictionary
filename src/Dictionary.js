@@ -48,7 +48,10 @@ export default function Dictionary(props) {
     return (
       <div className="Dictionary">
         <section>
-          <h1>Word search. Only in English.</h1>
+          <h1>
+            Get definitions, photos, definitions, pronunciation, and more.{" "}
+            <span className="attention">*</span>Only in English.
+          </h1>
           <form onSubmit={handleSubmit}>
             <input
               type="search"
@@ -60,8 +63,8 @@ export default function Dictionary(props) {
             suggested words: rose, swan, puppy, peace...
           </div>
         </section>
-        <Results results={results} />
         <Photos photos={photos} />
+        <Results results={results} />
       </div>
     );
   } else {
